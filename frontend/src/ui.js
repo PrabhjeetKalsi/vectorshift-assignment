@@ -6,10 +6,15 @@ import { useState, useRef, useCallback } from 'react';
 import ReactFlow, { Controls, Background, MiniMap } from 'reactflow';
 import { useStore } from './store';
 import { shallow } from 'zustand/shallow';
-import { InputNode } from './nodes/inputNode';
-import { LLMNode } from './nodes/llmNode';
-import { OutputNode } from './nodes/outputNode';
-import { TextNode } from './nodes/textNode';
+import { InputNode } from './components/nodes/inputNode';
+import { LLMNode } from './components/nodes/llmNode';
+import { OutputNode } from './components/nodes/outputNode';
+import { TextNode } from './components/nodes/textNode';
+import { FilterNode } from './components/nodes/filterNode';
+import { MathNode } from './components/nodes/mathNode';
+import { ApiNode } from './components/nodes/apiNode';
+import { NoteNode } from './components/nodes/noteNode';
+import { DelayNode } from './components/nodes/delayNode';
 
 import 'reactflow/dist/style.css';
 
@@ -20,6 +25,11 @@ const nodeTypes = {
   llm: LLMNode,
   customOutput: OutputNode,
   text: TextNode,
+  filter: FilterNode,
+  math: MathNode,
+  api: ApiNode,
+  note: NoteNode,
+  delay: DelayNode,
 };
 
 const selector = (state) => ({
