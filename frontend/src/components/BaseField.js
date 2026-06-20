@@ -11,11 +11,9 @@
 //
 // Callers can override or extend the wrapper styling via the style prop.
 
-const fieldStyle = { display: 'block' };
-
 export const BaseField = ({ label, style, children }) => (
-  <label style={{ ...fieldStyle, ...style }}>
-    {label ? `${label}: ` : null}
+  <label className="node-field" style={style}>
+    {label ? <span className="node-field__label">{label}</span> : null}
     {children}
   </label>
 );

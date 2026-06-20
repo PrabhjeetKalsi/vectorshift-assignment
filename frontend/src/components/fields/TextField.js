@@ -6,6 +6,6 @@ import { BaseField } from '../BaseField';
 
 export const TextField = ({ label, value, onChange, type = 'text', style }) => (
   <BaseField label={label} style={style}>
-    <input type={type} value={value} onChange={(e) => onChange(e.target.value)} />
+    <input className="nodrag" type={type} value={value} onChange={(e) => onChange(e.target.value)} />
   </BaseField>
 );

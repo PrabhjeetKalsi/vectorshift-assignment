@@ -22,6 +22,7 @@ export const InputNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Input"
+      accent="input"
       handles={[{ type: 'source', position: Position.Right, id: `${id}-value` }]}
     >
       <TextField label="Name" value={name} onChange={setName} />

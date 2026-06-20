@@ -9,7 +9,7 @@ export const NoteNode = ({ id, data }) => {
   const [note, setNote] = useNodeField(id, 'note', data?.note || 'Write a note...');
 
   return (
-    <BaseNode title="Note">
+    <BaseNode title="Note" accent="note">
       <TextAreaField label="Note" value={note} onChange={setNote} />
     </BaseNode>
   );

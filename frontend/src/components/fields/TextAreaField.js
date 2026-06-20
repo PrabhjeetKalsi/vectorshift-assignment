@@ -6,6 +6,6 @@ import { BaseField } from '../BaseField';
 
 export const TextAreaField = ({ label, value, onChange, style }) => (
   <BaseField label={label} style={style}>
-    <textarea value={value} onChange={(e) => onChange(e.target.value)} />
+    <textarea className="nodrag" value={value} onChange={(e) => onChange(e.target.value)} />
   </BaseField>
 );

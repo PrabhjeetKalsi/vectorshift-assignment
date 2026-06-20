@@ -12,6 +12,7 @@ export const DelayNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Delay"
+      accent="delay"
       handles={[
         { type: 'target', position: Position.Left, id: `${id}-in` },
         { type: 'source', position: Position.Right, id: `${id}-out` },

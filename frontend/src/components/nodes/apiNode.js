@@ -21,6 +21,7 @@ export const ApiNode = ({ id, data }) => {
   return (
     <BaseNode
       title="API Call"
+      accent="api"
       handles={[
         { type: 'target', position: Position.Left, id: `${id}-body` },
         { type: 'source', position: Position.Right, id: `${id}-response` },

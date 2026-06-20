@@ -11,6 +11,7 @@ export const TextNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Text"
+      accent="text"
       handles={[{ type: 'source', position: Position.Right, id: `${id}-output` }]}
     >
       <TextField label="Text" value={text} onChange={setText} />

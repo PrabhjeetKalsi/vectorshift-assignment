@@ -12,6 +12,7 @@ export const FilterNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Filter"
+      accent="filter"
       handles={[
         { type: 'target', position: Position.Left, id: `${id}-input` },
         { type: 'source', position: Position.Right, id: `${id}-output` },

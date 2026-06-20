@@ -6,6 +6,7 @@ import { BaseNode } from '../BaseNode';
 export const LLMNode = ({ id }) => (
   <BaseNode
     title="LLM"
+    accent="llm"
     handles={[
       { type: 'target', position: Position.Left, id: `${id}-system` },
       { type: 'target', position: Position.Left, id: `${id}-prompt` },

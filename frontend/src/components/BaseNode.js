@@ -13,27 +13,25 @@
 // along that side, so callers only need to say which side a handle is on.
 
 import { Handle, Position } from 'reactflow';
-
-const nodeStyle = {
-  width: 200,
-  minHeight: 80,
-  border: '1px solid black',
-  padding: 4,
-  boxSizing: 'border-box',
-};
+import Icon from '@mdi/react';
+import { NODE_ICONS } from '../icons';
 
 const isVertical = (position) =>
   position === Position.Left || position === Position.Right;
 
-export const BaseNode = ({ title, handles = [], style, children }) => {
+export const BaseNode = ({ title, icon, accent = 'default', handles = [], style, children }) => {
   // Group handles by side so we can space them evenly along each edge.
   const handlesBySide = handles.reduce((acc, handle) => {
     (acc[handle.position] = acc[handle.position] || []).push(handle);
     return acc;
   }, {});
 
+  // Icon is derived from the accent via the central registry, but an explicit
+  // `icon` (mdi path) prop can override it for one-off nodes.
+  const iconPath = icon || NODE_ICONS[accent];
+
   return (
-    <div style={{ ...nodeStyle, ...style }}>
+    <div className="node-card" data-accent={accent} style={style}>
       {Object.entries(handlesBySide).flatMap(([position, group]) =>
         group.map((handle, index) => {
           const offset = ((index + 1) / (group.length + 1)) * 100;
@@ -50,11 +48,12 @@ export const BaseNode = ({ title, handles = [], style, children }) => {
         })
       )}
 
-      <div>
-        <strong>{title}</strong>
+      <div className="node-card__title">
+        {iconPath ? <Icon className="node-card__icon" path={iconPath} size={0.75} /> : null}
+        {title}
       </div>
 
-      {children}
+      <div className="node-card__body">{children}</div>
     </div>
   );
 };

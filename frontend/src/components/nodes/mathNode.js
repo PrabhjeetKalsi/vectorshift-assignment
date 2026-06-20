@@ -19,6 +19,7 @@ export const MathNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Math"
+      accent="math"
       handles={[
         { type: 'target', position: Position.Left, id: `${id}-a` },
         { type: 'target', position: Position.Left, id: `${id}-b` },
