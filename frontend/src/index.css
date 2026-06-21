@@ -396,6 +396,88 @@ code {
   transform: translateY(0);
 }
 
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ----------------------------------------------------------------
+   Submit result toast
+   ---------------------------------------------------------------- */
+
+.toast {
+  position: fixed;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  max-width: 360px;
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--brand);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  animation: toast-in 0.18s ease;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast--success {
+  border-left-color: #16a34a;
+}
+
+.toast--warning {
+  border-left-color: #d97706;
+}
+
+.toast--error {
+  border-left-color: #dc2626;
+}
+
+.toast__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.toast__message {
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.toast__close {
+  flex-shrink: 0;
+  margin: -4px -4px 0 0;
+  padding: 0 6px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.toast__close:hover {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
 /* ----------------------------------------------------------------
    ReactFlow chrome
    ---------------------------------------------------------------- */
