@@ -359,6 +359,14 @@ code {
   min-height: 64px;
 }
 
+/* Auto-resizing variant (Text node): height is driven by JS to fit content, so
+   disable the manual resize grip, scrolling, and the fixed min-height. */
+.node-field textarea.node-field__textarea--auto {
+  resize: none;
+  overflow: hidden;
+  min-height: 0;
+}
+
 /* ----------------------------------------------------------------
    Submit button
    ---------------------------------------------------------------- */
