@@ -46,10 +46,12 @@
   --accent-llm: #8b5cf6;
   --accent-text: #6366f1;
   --accent-filter: #f59e0b;
-  --accent-math: #ec4899;
   --accent-api: #06b6d4;
   --accent-note: #eab308;
-  --accent-delay: #f97316;
+  --accent-knowledge: #14b8a6;
+  --accent-file: #f43f5e;
+  --accent-condition: #f97316;
+  --accent-integration: #ec4899;
 }
 
 * {
@@ -210,10 +212,12 @@ code {
 .palette-chip[data-accent='llm']    { --chip-accent: var(--accent-llm); }
 .palette-chip[data-accent='text']   { --chip-accent: var(--accent-text); }
 .palette-chip[data-accent='filter'] { --chip-accent: var(--accent-filter); }
-.palette-chip[data-accent='math']   { --chip-accent: var(--accent-math); }
 .palette-chip[data-accent='api']    { --chip-accent: var(--accent-api); }
 .palette-chip[data-accent='note']   { --chip-accent: var(--accent-note); }
-.palette-chip[data-accent='delay']  { --chip-accent: var(--accent-delay); }
+.palette-chip[data-accent='knowledge']   { --chip-accent: var(--accent-knowledge); }
+.palette-chip[data-accent='file']        { --chip-accent: var(--accent-file); }
+.palette-chip[data-accent='condition']   { --chip-accent: var(--accent-condition); }
+.palette-chip[data-accent='integration'] { --chip-accent: var(--accent-integration); }
 
 /* ----------------------------------------------------------------
    Node card (shared by every node via BaseNode)
@@ -273,10 +277,12 @@ code {
 .node-card[data-accent='llm']    { --node-accent: var(--accent-llm); }
 .node-card[data-accent='text']   { --node-accent: var(--accent-text); }
 .node-card[data-accent='filter'] { --node-accent: var(--accent-filter); }
-.node-card[data-accent='math']   { --node-accent: var(--accent-math); }
 .node-card[data-accent='api']    { --node-accent: var(--accent-api); }
 .node-card[data-accent='note']   { --node-accent: var(--accent-note); }
-.node-card[data-accent='delay']  { --node-accent: var(--accent-delay); }
+.node-card[data-accent='knowledge']   { --node-accent: var(--accent-knowledge); }
+.node-card[data-accent='file']        { --node-accent: var(--accent-file); }
+.node-card[data-accent='condition']   { --node-accent: var(--accent-condition); }
+.node-card[data-accent='integration'] { --node-accent: var(--accent-integration); }
 
 /* ----------------------------------------------------------------
    Connection handles

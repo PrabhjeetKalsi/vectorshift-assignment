@@ -11,10 +11,12 @@ import {
   mdiRobotOutline,
   mdiFormatText,
   mdiFilterOutline,
-  mdiSigma,
   mdiApi,
   mdiNoteTextOutline,
-  mdiTimerOutline,
+  mdiDatabaseSearchOutline,
+  mdiFileDocumentOutline,
+  mdiCallSplit,
+  mdiConnection,
 } from '@mdi/js';
 
 export const NODE_ICONS = {
@@ -23,8 +25,10 @@ export const NODE_ICONS = {
   llm: mdiRobotOutline,
   text: mdiFormatText,
   filter: mdiFilterOutline,
-  math: mdiSigma,
   api: mdiApi,
   note: mdiNoteTextOutline,
-  delay: mdiTimerOutline,
+  knowledge: mdiDatabaseSearchOutline,
+  file: mdiFileDocumentOutline,
+  condition: mdiCallSplit,
+  integration: mdiConnection,
 };

@@ -11,10 +11,12 @@ import { LLMNode } from './components/nodes/llmNode';
 import { OutputNode } from './components/nodes/outputNode';
 import { TextNode } from './components/nodes/textNode';
 import { FilterNode } from './components/nodes/filterNode';
-import { MathNode } from './components/nodes/mathNode';
 import { ApiNode } from './components/nodes/apiNode';
 import { NoteNode } from './components/nodes/noteNode';
-import { DelayNode } from './components/nodes/delayNode';
+import { KnowledgeBaseNode } from './components/nodes/knowledgeBaseNode';
+import { FileNode } from './components/nodes/fileNode';
+import { ConditionNode } from './components/nodes/conditionNode';
+import { IntegrationNode } from './components/nodes/integrationNode';
 
 import 'reactflow/dist/style.css';
 
@@ -26,10 +28,12 @@ const nodeTypes = {
   customOutput: OutputNode,
   text: TextNode,
   filter: FilterNode,
-  math: MathNode,
   api: ApiNode,
   note: NoteNode,
-  delay: DelayNode,
+  knowledgeBase: KnowledgeBaseNode,
+  file: FileNode,
+  condition: ConditionNode,
+  integration: IntegrationNode,
 };
 
 const selector = (state) => ({

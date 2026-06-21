@@ -10,10 +10,12 @@ const NODE_TYPES = [
   { type: 'customOutput', label: 'Output', accent: 'output' },
   { type: 'text', label: 'Text', accent: 'text' },
   { type: 'filter', label: 'Filter', accent: 'filter' },
-  { type: 'math', label: 'Math', accent: 'math' },
   { type: 'api', label: 'API Call', accent: 'api' },
   { type: 'note', label: 'Note', accent: 'note' },
-  { type: 'delay', label: 'Delay', accent: 'delay' },
+  { type: 'knowledgeBase', label: 'Knowledge Base', accent: 'knowledge' },
+  { type: 'file', label: 'File', accent: 'file' },
+  { type: 'condition', label: 'Condition', accent: 'condition' },
+  { type: 'integration', label: 'Integration', accent: 'integration' },
 ];
 
 export const PipelineToolbar = () => {
